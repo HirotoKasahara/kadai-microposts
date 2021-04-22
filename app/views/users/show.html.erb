@@ -9,6 +9,7 @@
       </div>
     </div>
     <%= render 'relationships/follow_button', user: @user %>
+    <div><a href="<%= likes_user_path(@user) %>">このユーザーのお気に入り一覧</a></div>
   </aside>
   <div class="col-sm-8">
     <ul class="nav nav-tabs nav-justified mb-3">
@@ -17,7 +18,3 @@
       <li class="nav-item"><a href="<%= followers_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(followers_user_path(@user)) %>">Followers  <span class="badge badge-secondary"><%= @count_followers %></span></a></li>
     </ul>
     <%= render 'microposts/microposts', microposts: @microposts%>
-
-  </div>
-  <h1><a href="<%= likes_user_path(@user) %>">このユーザーのお気に入り一覧</a></h1>
-</div>
