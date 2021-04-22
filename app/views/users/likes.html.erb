@@ -1,0 +1,7 @@
+<h1>お気に入り一覧</h1>
+<% @likes_post.each do |like_post|%>
+<ul>
+<li>id:<%= like_post.id %></li>
+content:<%= like_post.content %>
+</ul>
+<% end %>

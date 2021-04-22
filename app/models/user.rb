@@ -45,6 +45,8 @@ class User < ApplicationRecord
    def favorite?(micropost)
      self.likes.include?(micropost)
    end 
-  
+  def likes_microposts
+      Micropost.find(@user.likes.ids)
+  end 
 end
 
