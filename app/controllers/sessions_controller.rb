@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       flash[:success]="成功しましたログイン"
       redirect_to @user
     else
-      flasf[:danger]="失敗しましたログイン"
+      flash[:danger]="失敗しましたログイン"
       render :new
     end
   end
